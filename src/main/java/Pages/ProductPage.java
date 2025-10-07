@@ -1,6 +1,7 @@
 package Pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -24,13 +25,13 @@ public class ProductPage extends BasePage {
     }
 
     public void clickAddToCart() {
-        WebElement addBtn = waitForClickable(addToCartBtn,10);
+        WebElement addBtn = waitForClickable(addToCartBtn,20);
         addBtn.click();
     }
 
+
     public void closeConfirmationPopup() {
-        waitForVisibility(continueShoppingBtn, 15);
-        WebElement closeBtn = waitForClickable(continueShoppingBtn,15);
+        WebElement closeBtn = waitForClickable(continueShoppingBtn, 20);
         closeBtn.click();
     }
 

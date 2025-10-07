@@ -18,14 +18,14 @@ public class HomePage extends BasePage {
     }
 
     public void clickSignIn() {
-        //WebElement signIn = waitForClickable(signInBtn, 10);
-        click(signInBtn);
+        WebElement signIn = waitForClickable(signInBtn, 10);
+        signIn.click();
     }
 
     public void searchAndSelectFirst(String text) {
         type(searchInput, text);
         WebElement firstSuggestion = waitForVisibility(
-                By.cssSelector("ul.ui-autocomplete li.ui-menu-item a span.product"),20);
+                By.cssSelector("ul.ui-autocomplete li.ui-menu-item a"),20);
         firstSuggestion.click();
     }
 
